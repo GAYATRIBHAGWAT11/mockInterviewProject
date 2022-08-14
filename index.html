@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Mock interview assignment</title>
+</head>
+
+<body>
+    <!-- /* ------------------header part-------------- */ -->
+    <header>
+        <div class="flex-container">
+            <button class="btn" id="btn1">All</button>
+            <button class="btn" id="btn2">red</button>
+            <button class="btn" id="btn3">yellow</button>
+            <button class="btn" id="btn4">blue</button>
+            <button class="btn" id="btn5">black</button>
+            <i id="btn7" style="font-size:30px" class="fa">&#xf14a;</i>
+        </div>
+        <button class="btn" id="btn6">Create task</button>
+    </header>
+    <!-- /* ------------------header part over-------------- */ -->
+    <main class="main">
+        <div class="wrapper">
+            <div class="inputFiled">
+                <label for="subject"></label>
+                <textarea id="subject" name="subject" placeholder="please enter task!" style="height:300px"></textarea>
+                <button class="done" id="done">Done</button>
+            </div>
+            <div class="wrapperBtn">
+                <button class="textarea_color" id="textarea_color_red" style="background-color:red;"></button>
+                <button class="textarea_color" id="textarea_color_yellow" style="background-color: yellow;"></button>
+                <button class="textarea_color" id="textarea_color_green" style="background-color: green;"></button>
+                <button class="textarea_color" id="textarea_color_black" style="background-color: black;"></button>
+                <i id="crossBtn" style="font-size:15px; color: whitesmoke;" class="fa">&#xf00d;</i>
+            </div>
+        </div>
+    </main>
+    <!-- <div class="taskAddedContainer">
+        <div class="changeColor"></div>
+        <h2 style="font-size:20px;" class="taskAdded"></h2> 
+        <button class="lock" id="lock">lock</button>
+    </div>  -->
+    <div class="cardbox flex">
+        <div class="card" readonly>
+            <div class="changeColors"></div>
+            <div class="card-body">
+                <h3 class="card-title" readonly></h3>
+            </div>
+        </div>
+          <div class="icons-container">
+            <div class="first-part flex">
+                <i id="tick" style="font-size:20px" class="fa">&#xf14a;</i>
+                <i id="edit" class="fa fa-pencil"></i>
+                <i id="delete" class="fa fa-trash"></i>
+                <button id="pallete"></button>
+            </div>
+            <div class="second-part">
+                <button class="lock">lock</button>
+            </div> 
+        </div> 
+    </div> 
+    <script src="main.js"></script>
+</body>
+
+</html>
