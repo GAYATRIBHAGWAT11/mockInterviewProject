@@ -5,67 +5,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="style.css">
-    <title>Mock interview assignment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>mock interview project</title>
 </head>
 
 <body>
-    <!-- /* ------------------header part-------------- */ -->
-    <header>
-        <div class="flex-container">
-            <button class="btn" id="btn1">All</button>
-            <button class="btn" id="btn2">red</button>
-            <button class="btn" id="btn3">yellow</button>
-            <button class="btn" id="btn4">blue</button>
-            <button class="btn" id="btn5">black</button>
-            <i id="btn7" style="font-size:30px" class="fa">&#xf14a;</i>
+
+    <div class="main">
+        <header>
+            <div class="main-container">
+                <h2 id="all" onclick="showall()">All</h2>
+                <div id="red" class="select" onclick="redfilter()"></div>
+                <div id="yellow" class="select" onclick="yellowfilter()"></div>
+                <div id="blue" class="select" onclick="bluefilter()"></div>
+                <div id="black" class="select" onclick="blackfilter()"></div>
+                <i class="fa fa-check" id="check" onclick="showchecked()"></i>
+
+            </div>
+            <h2 id="createtask" onclick="show()">create task</h2>
+        </header>
+
+        <table id="mybox">
+            <tr>
+                <th id="tablehead"></th>
+            </tr>
+        </table>
+
+        <div id="checkbox">
+
+             <!-- <div id="box" style="border-top: 10px solid ; border-top-color: blue;">
+                <h2 id="taskname">hgfgf</h2>
+                <div class="icons">
+                    <div class="actionicon" id="actionicon">
+                        <i class="fa fa-check" id="check2" onclick="checked()"></i>
+                        <i class="fa fa-pencil" id="edit" onclick="editTaskName()"></i>
+                        <i class="fa fa-trash-o" id="delete" onclick="remove()"></i>
+                        <i class="fa fa-square" id="changecolor" onclick="changecolors()"></i>
+                    </div>
+                    <div class="lockicon">
+                        <i class="fa fa-lock" id="lock" onclick="unlock()"></i>
+                        <i class="fa fa-unlock" id="unlock" onclick="lock()"></i>
+                    </div>
+                </div>
+            </div> -->
+            
+            
+           
         </div>
-        <button class="btn" id="btn6">Create task</button>
-    </header>
-    <!-- /* ------------------header part over-------------- */ -->
-    <main class="main">
-        <div class="wrapper">
-            <div class="inputFiled">
-                <label for="subject"></label>
-                <textarea id="subject" name="subject" placeholder="please enter task!" style="height:300px"></textarea>
-                <button class="done" id="done">Done</button>
+
+
+        <main id="popcontainer">
+            <div id="popbox">
+                <div id="textarea">
+                    <input type="text" id="inputvalue" placeholder="please enter task!">
+                    <div class="btnarea">
+                        <button type="submit" id="done" onclick="doning()">done</button>
+                    </div>
+                </div>
+                <div id="colorpallete">
+                    <div class="color2">
+                        <div id="red1" class="select1" onclick="redborder()"></div>
+                        <div id="yellow1" class="select1" onclick="yellowborder()"></div>
+                        <div id="blue1" class="select1" ></div>
+                        <div id="black1" class="select1" onclick="blackborder()"></div>
+                    </div>
+                    <i class="fa fa-close" id="close" onclick="closing()"></i>
+                </div>
             </div>
-            <div class="wrapperBtn">
-                <button class="textarea_color" id="textarea_color_red" style="background-color:red;"></button>
-                <button class="textarea_color" id="textarea_color_yellow" style="background-color: yellow;"></button>
-                <button class="textarea_color" id="textarea_color_green" style="background-color: green;"></button>
-                <button class="textarea_color" id="textarea_color_black" style="background-color: black;"></button>
-                <i id="crossBtn" style="font-size:15px; color: whitesmoke;" class="fa">&#xf00d;</i>
-            </div>
-        </div>
-    </main>
-    <!-- <div class="taskAddedContainer">
-        <div class="changeColor"></div>
-        <h2 style="font-size:20px;" class="taskAdded"></h2> 
-        <button class="lock" id="lock">lock</button>
-    </div>  -->
-    <div class="cardbox flex">
-        <div class="card" readonly>
-            <div class="changeColors"></div>
-            <div class="card-body">
-                <h3 class="card-title" readonly></h3>
-            </div>
-        </div>
-          <div class="icons-container">
-            <div class="first-part flex">
-                <i id="tick" style="font-size:20px" class="fa">&#xf14a;</i>
-                <i id="edit" class="fa fa-pencil"></i>
-                <i id="delete" class="fa fa-trash"></i>
-                <button id="pallete"></button>
-            </div>
-            <div class="second-part">
-                <button class="lock">lock</button>
-            </div> 
-        </div> 
-    </div> 
+        </main>
+    </div>
+
     <script src="main.js"></script>
+
 </body>
 
 </html>
